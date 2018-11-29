@@ -1,0 +1,244 @@
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $typeBase;
+  line-height: 1;
+  font-family: "Product Sans", sans-serif;
+  background: $bgColor;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+
+  * {
+    text-transform: lowercase;
+  }
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::placeholder {
+  color: $lightGrayColor;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $typeBase;
+  line-height: 1;
+  font-family: "Product Sans", sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+}
+
+.containerIcon {
+  border: 1px solid $borderColor;
+  padding: 8px;
+  border-radius: 999px;
+
+  &.isSmall {
+    padding: 16px;
+  }
+}
+
+.container {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  position: inherit;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &.hasHorCenteredContent {
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media (min-width: 992px) {
+    width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1204px;
+  }
+}
+
+.isDisabled {
+  display: none;
+}
+
+.containerBannerPromotion {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+}
+.labelCondition {
+  background: #df494a;
+  width: fit-content;
+  padding: 3px 10px;
+  font-weight: bold;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+.hide-box {
+  display: none;
+}
+
+.panelPayment {
+  border: 2px solid #9c86ad;
+  background: rgba(146, 126, 163, 0.3);
+  padding: 8px;
+  border-radius: 8px;
+  width: 50%;
+  margin: 0 0 0 auto;
+
+  input {
+    color: $primaryColor;
+    font-weight: 500;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  &.isImageProduct {
+    width: 80px;
+    height: 80px;
+  }
+
+  &.emptyImageSearch {
+    width: 200px;
+  }
+}
+
+.containerImage {
+  &.isLow{
+    width: 50px;
+    height: 50px;
+  }
+
+  &.isMedium{
+    width: 88px;
+    height: 88px;
+  }
+
+
+}
+
+#offerFormShow{
+  width: 100%;
+  margin-left: 16px;
+}
+
+input,
+select,
+textarea,
+button {
+  border: 0;
+  color: $textColor;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+  font-style: normal;
+  font-weight: 400;
+  font-size: $typeBase;
+  line-height: 1;
+  font-family: "Product Sans", sans-serif;
+  text-transform: none;
+  letter-spacing: 0.03em;
+  outline: 0;
+}
+
+input,
+select,
+textarea {
+  &::placeholder {
+    color: lighten($grayColor, 25);
+    font-style: normal;
+    font-weight: 300;
+    font-size: $typeBase;
+    line-height: 1;
+    font-family: "Product Sans", sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 0.03em;
+  }
+
+  &::-ms-input-placeholder {
+    color: lighten($grayColor, 25);
+    font-style: normal;
+    font-weight: 300;
+    font-size: $typeBase;
+    line-height: 1;
+    font-family: "Product Sans", sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 0.03em;
+  }
+
+  &:-ms-input-placeholder {
+    color: lighten($grayColor, 25);
+    font-style: normal;
+    font-weight: 300;
+    font-size: $typeBase;
+    line-height: 1;
+    font-family: "Product Sans", sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+textarea {
+  &.isBordered {
+    border: 1px solid $borderColor;
+    padding: 16px;
+    border-radius: 3px;
+  }
+}
+
+
+.inputFake {
+  z-index: 10;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 8px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  width: 100%;
+  min-height: 42px;
+}
+
+.hasCenterAligned {
+  align-items: center !important;
+}
